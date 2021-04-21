@@ -4,29 +4,50 @@
     padding: 0;
 }
 
+body {
+    color: #7a7d81;
+}
+
 .wrapper {
     width: 100%;
     height: 100vh;
-    background-color: aqua;
+}
+
+h2 {
+    color: white;
+    margin: 0px 0
 }
 
 h3 {
+    color: white;
     margin: 10px 0;
+}
+h4 {
+    color: white;
+}
+
+li {
+    color: #7a7d81;
+    list-style: none;
+    padding: 10px 0;
+}
+
+
+.action_icon {
+    font-size: 22px;
+    padding: 0px 15px;
 }
 
 main {
     display: flex;
     height: calc(100% - 90px);
-    background-color: blue;
 }
-
 
 .main_nav {
     display: flex;
     flex-direction: column;
     width: 230px;
     background-color: black;
-    color: lightgrey;
     padding: 10px 20px;
 }
 
@@ -55,30 +76,26 @@ main {
     vertical-align: middle;
 }
 
-.main_content {
-    width: calc(100% - 230px);
-    padding-top: 90px;
-    background-color: darkcyan;
-    overflow-y: auto;
-}
 
 .call-to-action {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     position: fixed;
+    padding-right: 20px;
     top: 0;
     right: 0;
     width: calc(100% - 230px);
     height: 90px;
     background-color: black;
+    opacity: 0.9;
     text-align: right;
 }
 
 .btn {
     text-transform: uppercase;
     display: inline-block;
-    background-color: black;
+    background-color: #080b12;
     color: white;
     font-size: 12px;
     padding: 10px 30px;
@@ -86,12 +103,56 @@ main {
     border-radius: 50px;
     
 }
+.main_content {
+    color: grey;
+    width: calc(100% - 230px);
+    padding: 90px 20px 0;
+    background-color: #141922;
+    overflow-y: auto;
+
+}
+
+
+.content {
+    text-align: center;
+}
+
+.main_content li {
+    display: inline-block;
+    padding: 20px 10px;
+    text-transform: uppercase;
+}
+
+.main_content p {
+    padding-top: 10px;
+}
+
+.card_container {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.card {
+    display: inline-block;
+    width: 180px;
+    margin: 30px 15px 30px 0px;
+    text-align: center;
+}
+
+.card img {
+    width: 180px;
+}
+
+.artist  {
+    border-radius: 50%;
+}
 
 footer {
     display: flex;
     justify-content: space-between;
     height: 90px;
-    background-color: white;
+    background-color: grey;
 }
 
 footer p {
@@ -104,30 +165,53 @@ footer p {
     align-items: center;
     width: 230px;
     height: 100%;
-    background-color: grey;
+    background-color: #282828;
 }
 .footer_center {
     color: white;
     display: flex;
+    flex-wrap: nowrap;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     width: 40%;
     height: 100%;
-    background-color: black;
+    background-color: #282828;
+}
+
+.container_input {
+    margin-top: 10px;
+    width: 80%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.container_input span {
+    vertical-align: middle;
+}
+
+.footer_center .far.fa-play-circle {
+    vertical-align: middle;
+    font-size: 30px;
 }
 
 .prova {
+    text-align: center;
     width: 80%;
 }
 #song_time {
+    display: inline-block;
     height: 3px;
     width: 80%;
+    margin: 0px 10px;
+    vertical-align: middle;
     background-color: grey;
 }
 #time_bar {
-    height: 15%;
-    width: 3px;
+    display: inline-block;
+    height: 3px;
+    width: 15%;
+    vertical-align: middle;
     background-color: lightgrey;
 }
 
@@ -140,6 +224,10 @@ footer p {
 }
 .footer_right {
     justify-content: flex-end;
+    align-items: center;
+}
+.footer_right span {
+    margin-left: 20px;
 }
 
 
@@ -157,12 +245,43 @@ footer p {
     font-size: 20px;
 }
 
-li {
-    list-style: none;
-    padding: 10px 0;
-}
 
-
+/* SLIDER */
+.slidecontainer {
+    width: 80%;
+  }
+  
+  .slider {
+      vertical-align: middle;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 3px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider:hover {
+    opacity: 1;
+  }
+  
+  /* .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+  } */
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+  }
 
 
 
@@ -172,6 +291,22 @@ li {
 @media screen and  (max-width: 767px) {
     .main_nav {
         width: 50px;
+        padding: 2px 10px;
+    }
+
+    .nav_logo,
+    .nav_menu,
+    .nav_playlist,
+    .nav_download {
+        padding: 0px;
+    }
+
+    .main_nav span {
+        display: none;
+    }
+
+    .nav_playlist {
+        display: none;
     }
 
     .main_content {

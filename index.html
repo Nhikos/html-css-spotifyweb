@@ -20,9 +20,9 @@
                     </div>
                     <div class="nav_menu">
                         <ul>
-                            <li><i class="fas fa-home"></i> Home</li>
-                            <li><i class="fas fa-search"></i> Cerca</li>
-                            <li><i class="fas fa-book-open"></i> La tua libreria</li>
+                            <li><i class="fas fa-home"></i> <span>Home</span></li>
+                            <li><i class="fas fa-search"></i> <span>Cerca</span></li>
+                            <li><i class="fas fa-book-open"></i> <span>La tua libreria</span></li>
                         </ul>
                     </div>
                     <div class="nav_playlist">
@@ -49,7 +49,7 @@
                     <!-- nav_bot -->
                     <div class="nav_bottom">
                         <img src="img/profile.svg" alt="">
-                        <span>Jhon Doe</span>
+                        <h3>John Doe</h3>
                     </div>
                     <!-- /nav_bot -->
                 </nav>
@@ -63,7 +63,75 @@
                         </div>
                     </div>
                      <div class="content">
-                        
+                        <ul>
+                            <li>in evidenza</li>
+                            <li>podcast</li>
+                            <li>classifiche</li>
+                            <li>generi e mood</li>
+                            <li>nuove uscite</li>
+                            <li>scopri</li>
+                        </ul>
+                    </div>
+
+                    <h2>Recently played</h2>
+                    <!-- SONGS -->
+                    <div class="card_container">
+                        <div class="card">
+                            <img src="img/metal_lifting.jpg" alt="">
+                            <h3>Heavy Metal</h3>
+                            <span>Sbutitle</span>
+                        </div>
+                        <div class="card">
+                            <img src="img/stranger.jpeg" alt="">
+                            <h3>Stranger Things, Vol. 1 (a Netflix Original Series Soundrack)</h3>
+                            <span>Kyle Dixon & Michael Stein</span>
+                        </div>
+                        <div class="card">
+                            <img src="img/aquietplace.jpeg" alt="">
+                            <h3>A quiet place</h3>
+                            <span>Sbutitle</span>
+                        </div>
+                        <div class="card">
+                            <img src="img/split.jpeg" alt="">
+                            <h3>Split</h3>
+                            <span>Sbutitle</span>
+                        </div>
+                        <div class="card">
+                            <img src="img/cure.jpeg" alt="">
+                            <h3>A cure for wellness</h3>
+                            <span>Sbutitle</span>
+                        </div>
+                        <div class="card">
+                            <img src="img/sinister.jpeg" alt="">
+                            <h3>Sinister</h3>
+                            <span>Sbutitle</span>
+                        </div>
+                    </div>
+                    <h2>Creato per John Doe</h2>
+                    <p>Più ascolti, più accurati saranno i suggerimenti.</p>
+                    <div class="card_container">
+                        <div class="card">
+                            <img src="img/radar.jpeg" alt="">
+                            <h3>Release Radar</h3>
+                        </div>
+                        <div class="card">
+                            <img src="img/mixdaily.jpeg" alt="">
+                            <h3>Daily Mix 1</h3>
+                        </div>
+                    </div>
+                    <h2>Artisti più popolari</h2>
+                    <p>Più ascolti, più accurati saranno i suggerimenti.</p>
+                    <div class="card_container">
+                        <div class="card">
+                            <img class="artist" src="img/youg.jpeg" alt="">
+                            <h3>Youg</h3>
+                            <span>Sbutitle</span>
+                        </div>
+                        <div class="card artist">
+                            <img class="artist" src="img/einaudi.jpeg" alt="">
+                            <h3>Heavy Metal</h3>
+                            <span>Sbutitle</span>
+                        </div>
                     </div>
                 </section>
                 <!-- /main content -->
@@ -88,21 +156,21 @@
 
                 <!-- footer center -->
                 <div class="footer_center">
-                    <div>
-                        <span><i class="fas fa-random"></i></span>
-                        <span><i class="fas fa-step-backward"></i></span>
-                        <span><i class="far fa-play-circle"></i></span>
-                        <span><i class="fas fa-step-forward"></i></span>
-                        <span><i class="fas fa-redo-alt"></i></span>
+                    <div class="container_input">
+                        <span><i class="action_icon fas fa-random"></i></span>
+                        <span><i class="action_icon fas fa-step-backward"></i></span>
+                        <span><i class="action_icon far fa-play-circle"></i></span>
+                        <span><i class="action_icon fas fa-step-forward"></i></span>
+                        <span><i class="action_icon fas fa-redo-alt"></i></span>
                     </div>
                     <div class="prova">
-                    <span>0:25</span>
-                    <span id="song_time">
-                        <span id="time_bar">
-                          
+                        <span>0:25</span>
+                        <span id="song_time">
+                            <span id="time_bar">
+                            
+                            </span>
                         </span>
-                    </span>
-                    <span>4:35</span>
+                        <span>4:35</span>
                     </div>
                 </div>
                 <!-- /footer center -->
@@ -112,6 +180,9 @@
                     <span><i class="fas fa-bars"></i></span>
                     <span><i class="fas fa-tv"></i></span>
                     <span><i class="fas fa-volume-up"></i></span>
+                    <div class="slidecontainer">
+                        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                      </div>
                 </div>
                 <!-- /footer right -->
             </footer>
