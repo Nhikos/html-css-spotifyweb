@@ -153,10 +153,12 @@ main {
 
 .main_content li {
     display: inline-block;
-    padding: 20px 10px;
+    margin: 20px 10px;
     text-transform: uppercase;
 }
-
+.main_content li:first-child {
+    border-bottom: 1px solid yellowgreen;
+}
 .main_content p {
     font-size: 13px;
     margin: 5px 0px 5px;
@@ -252,6 +254,16 @@ footer p {
     border-radius: 6px;
     position: relative;
     vertical-align: middle;
+}
+.circle {
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 39%;
+    background-color: white;
 }
 .player_fill {
     width: 40%;
@@ -458,16 +470,6 @@ footer p {
 }
 
 /* HOVERS */
-/* .player_fill:hover {
-    position: absolute;
-    vertical-align: middle;
-    height: 20px;
-    width: 20px;
-    background-color: white;
-    border-radius: 50px;
-
-} */
-
 i:hover {
     cursor: pointer;
     color: white;
@@ -476,6 +478,16 @@ i:hover {
 li:hover {
     color: white;
     cursor: pointer;
+}
+
+#create_playlist:hover {
+    cursor: pointer;
+    background-color: white;
+}
+
+.nav_playlist span:hover {
+    cursor: pointer;
+    color: white;
 }
 
 .nav_bottom i:hover {
@@ -489,5 +501,12 @@ li:hover {
 }
 
 .btn:hover {
-    font-size: 14px;
+    transform: scale(1.2, 1.2);
+    cursor: pointer;
+}
+
+.card_container img:hover {
+    background-color: black;
+    opacity: 0.2;
+    cursor: pointer;
 }
