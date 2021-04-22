@@ -84,6 +84,13 @@ main {
 .nav_playlist {
     flex-grow: 1;
 }
+
+.create_container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 .profile {
     display: flex;
     justify-content: flex-start;
@@ -167,7 +174,16 @@ main {
 .card_container {
     display: flex;
     flex-wrap: wrap;
+    position: relative;
     
+}
+
+.img_container {
+    position: relative;
+}
+
+.play i {
+    color: white;
 }
 
 .card {
@@ -179,6 +195,21 @@ main {
 .card img {
     width: 100%;
 }
+
+.play {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .play > i {
+      font-size: 58px;
+  }
 
 .artist  {
     border-radius: 50%;
@@ -247,22 +278,24 @@ footer p {
 }
 
 .player {
+    
+    position: relative;
     display: inline-block;
     width: 70%;
     height: 3px;
     background-color: grey;
     border-radius: 6px;
-    position: relative;
     vertical-align: middle;
 }
 .circle {
+    display: none;
+    position: absolute;
     width: 20px;
     height: 20px;
     border: 1px solid white;
     border-radius: 10px;
-    position: absolute;
-    top: 50%;
-    left: 39%;
+    left: 37%;
+    top: -275%;
     background-color: white;
 }
 .player_fill {
@@ -271,7 +304,6 @@ footer p {
     margin: 0px;
     background-color: lightgray;
     border-radius: 6px;
-    position: absolute;
     vertical-align: middle;
 }
 .footer_left{
@@ -316,6 +348,7 @@ footer p {
     width: 40px;
     height: 40px;
     margin-left: 10px;
+    margin-right: 10px;
     background-color: grey;
     color: black;
     line-height: 40px;
@@ -323,7 +356,7 @@ footer p {
 }
 
 #plus-sign {
-    font-size: 20px;
+    font-size: 32px;
 }
 
 .nav_logo {
@@ -334,7 +367,6 @@ footer p {
 @media screen and (max-width: 552px) {
     .main_nav {
         width: 50px;
-        padding: 2px 10px;
     }
 
     .nav_logo,
@@ -387,6 +419,7 @@ footer p {
     }
 
     .profile {
+        padding-left: 10px;
         margin-bottom: 10px;
         border: none;
     }
@@ -480,9 +513,18 @@ li:hover {
     cursor: pointer;
 }
 
-#create_playlist:hover {
+.create_container:hover {
     cursor: pointer;
+    color: white;
+}
+
+#create_playlist:hover {
+    color: black;
     background-color: white;
+}
+
+#plus-sign:hover {
+    color: black;
 }
 
 .nav_playlist span:hover {
@@ -505,8 +547,35 @@ li:hover {
     cursor: pointer;
 }
 
-.card_container img:hover {
+.img_container:hover img {
     background-color: black;
     opacity: 0.2;
     cursor: pointer;
+}
+
+.player:hover .player_fill {
+    background-color: yellowgreen;
+    cursor: pointer;
+}
+
+.far.fa-play-circle:hover {
+    transform: scale(1.2);
+}
+
+.player:hover .circle {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.img_container:hover .play {
+    opacity: 1;
+}
+
+.footer_left h4:hover {
+    cursor: pointer;
+}
+
+.footer_left p:hover {
+    cursor: pointer;
+    text-decoration: underline;
 }
