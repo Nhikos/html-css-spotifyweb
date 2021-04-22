@@ -5,6 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
         <title>Document</title>
     </head>
@@ -16,7 +18,8 @@
                 <nav class="main_nav">
                     <!-- nav_top -->
                     <div class="nav_logo">
-                        <img src="img/logo.svg" alt="">
+                        <img class="logo_lg" src="img/logo.svg" alt="">
+                        <img class="logo_sm" src="/img/logo-small.svg" alt="">
                     </div>
                     <div class="nav_menu">
                         <ul>
@@ -26,7 +29,7 @@
                         </ul>
                     </div>
                     <div class="nav_playlist">
-                        <h3>Playlist</h3>
+                        <h3>PLAYLIST</h3>
                         <div id="create_playlist">
                             <span id="plus-sign">+</span>
                         </div>
@@ -41,15 +44,13 @@
                             <li>Nome Playlist</li>
                         </ul>
                     </div>
-                    <div class="nav_download">
-                        <span><i class="far fa-arrow-alt-circle-down"></i> Installa app</span>
-                    </div>
                     <!-- /nav_top -->
-
-                    <!-- nav_bot -->
                     <div class="nav_bottom">
+                        <i class="far fa-arrow-alt-circle-down"></i><span> Installa app</span>
+                    <div class="profile">
                         <img src="img/profile.svg" alt="">
                         <h3>John Doe</h3>
+                    </div>
                     </div>
                     <!-- /nav_bot -->
                 </nav>
@@ -62,7 +63,7 @@
                             effettua l'upgrade
                         </div>
                     </div>
-                     <div class="content">
+                    <div class="content">
                         <ul>
                             <li>in evidenza</li>
                             <li>podcast</li>
@@ -79,32 +80,32 @@
                         <div class="card">
                             <img src="img/metal_lifting.jpg" alt="">
                             <h3>Heavy Metal</h3>
-                            <span>Sbutitle</span>
+                            <p>Sbutitle</p>
                         </div>
                         <div class="card">
                             <img src="img/stranger.jpeg" alt="">
                             <h3>Stranger Things, Vol. 1 (a Netflix Original Series Soundrack)</h3>
-                            <span>Kyle Dixon & Michael Stein</span>
+                            <p>Kyle Dixon & Michael Stein</p>
                         </div>
                         <div class="card">
                             <img src="img/aquietplace.jpeg" alt="">
                             <h3>A quiet place</h3>
-                            <span>Sbutitle</span>
+                            <p>Sbutitle</p>
                         </div>
                         <div class="card">
                             <img src="img/split.jpeg" alt="">
                             <h3>Split</h3>
-                            <span>Sbutitle</span>
+                            <p>Sbutitle</p>
                         </div>
                         <div class="card">
                             <img src="img/cure.jpeg" alt="">
                             <h3>A cure for wellness</h3>
-                            <span>Sbutitle</span>
+                            <p>Sbutitle</p>
                         </div>
                         <div class="card">
                             <img src="img/sinister.jpeg" alt="">
                             <h3>Sinister</h3>
-                            <span>Sbutitle</span>
+                            <p>Sbutitle</p>
                         </div>
                     </div>
                     <h2>Creato per John Doe</h2>
@@ -125,12 +126,12 @@
                         <div class="card">
                             <img class="artist" src="img/youg.jpeg" alt="">
                             <h3>Youg</h3>
-                            <span>Sbutitle</span>
+                            <p>Sbutitle</p>
                         </div>
                         <div class="card artist">
                             <img class="artist" src="img/einaudi.jpeg" alt="">
                             <h3>Heavy Metal</h3>
-                            <span>Sbutitle</span>
+                            <p>Sbutitle</p>
                         </div>
                     </div>
                 </section>
@@ -145,11 +146,14 @@
                     <div>
                         <img src="img/sinister.jpeg" alt="Album_Sinister">
                     </div>
-                    <div>
+                    <div class="info_song">
                         <h4>Sinister</h4>
-                        <p>blablabla</p>
+                        <p>Brano Nome</p>
                     </div>
-                    <p><i class="far fa-heart"></i> <i class="far fa-folder"></i></p>
+                    <div class="personal_icon">
+                        <i class="far fa-heart"></i>
+                        <i class="far fa-folder"></i>
+                    </div>
 
                 </div>
                 <!-- /footer left -->
@@ -157,19 +161,18 @@
                 <!-- footer center -->
                 <div class="footer_center">
                     <div class="container_input">
-                        <span><i class="action_icon fas fa-random"></i></span>
-                        <span><i class="action_icon fas fa-step-backward"></i></span>
-                        <span><i class="action_icon far fa-play-circle"></i></span>
-                        <span><i class="action_icon fas fa-step-forward"></i></span>
-                        <span><i class="action_icon fas fa-redo-alt"></i></span>
+                        <i class="action_icon fas fa-random"></i>
+                        <i class="action_icon fas fa-step-backward"></i>
+                        <i class="action_icon far fa-play-circle"></i>
+                        <i class="action_icon fas fa-step-forward"></i>
+                        <i class="action_icon fas fa-redo-alt"></i>
                     </div>
                     <div class="prova">
+
                         <span>0:25</span>
-                        <span id="song_time">
-                            <span id="time_bar">
-                            
-                            </span>
-                        </span>
+                        <div class="player">
+                            <div class="player_fill"></div>
+                        </div>
                         <span>4:35</span>
                     </div>
                 </div>
@@ -180,9 +183,9 @@
                     <span><i class="fas fa-bars"></i></span>
                     <span><i class="fas fa-tv"></i></span>
                     <span><i class="fas fa-volume-up"></i></span>
-                    <div class="slidecontainer">
-                        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-                      </div>
+                    <div class="player">
+                        <div class="player_fill"></div>
+                    </div>
                 </div>
                 <!-- /footer right -->
             </footer>
