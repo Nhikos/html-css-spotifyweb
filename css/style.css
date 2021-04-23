@@ -33,8 +33,6 @@ li {
     padding: 10px 0;
 }
 
-
-
 main {
     display: flex;
     height: calc(100% - 90px);
@@ -131,6 +129,7 @@ main {
     background-color: black;
     opacity: 0.9;
     text-align: right;
+    z-index: 1;
 }
 
 .btn {
@@ -266,14 +265,14 @@ footer p {
     font-size: 30px;
 }
 
-.prova {
+.time_bar {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
 }
 
-.prova > span {
+.time_bar > span {
     margin: 0px 5px;
 }
 
@@ -312,6 +311,7 @@ footer p {
 
 .footer_left img {
     height: 60px;
+    padding-left: 10px;
 }
 
 .info_song {
@@ -377,7 +377,7 @@ footer p {
     }
     
     .nav_logo {
-        height: 0px;
+        height: 46px;
     }
 
     .logo_lg {
@@ -385,9 +385,9 @@ footer p {
     }
     .logo_sm {
         display: inline-block;
-        height: 40px;
+        height: 34px;
+        padding: 0px 10px;
         color: white;
-        background-color: white;
     }
 
     .nav_menu {
@@ -479,7 +479,7 @@ footer p {
         flex-direction: column;
         margin-right: 35px;
     }
-    .prova > span {
+    .time_bar > span {
         font-size: 12px
     }
 }
